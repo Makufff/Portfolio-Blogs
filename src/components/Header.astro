@@ -1,0 +1,92 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import DarkModeToggle from "./DarkModeToggle.astro";
+import logoLarge from "../assets/images/logo-32.png"
+---
+
+
+  <div class="w-5/6 mx-auto mb-[2rem] items-center">
+    <section class="relative mx-auto">
+      <!-- navbar -->
+      <nav
+        class="flex-col justify-between dark:bg-transparent bg-white dark:text-white text-black"
+      >
+        <div class="py-4 flex items-center justify-between">
+          <a
+            class="flex unset text-3xl font-heading font-black bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent"
+            href="/"
+          >
+            <img class="" src="https://img5.pic.in.th/file/secure-sv1/logo-32.png" alt="logo">
+            <span>Makufff.Logs<\>
+          </a>
+          <!-- Nav Links -->
+          <div class="flex">
+            <ul
+            class="unset  hidden md:flex  mx-auto font-semibold font-heading "
+          >
+            <li><HeaderLink href="/">Home</HeaderLink></li>
+            <li><HeaderLink href="/blogs">Blogs</HeaderLink></li>
+            <li><HeaderLink href="/author">Team</HeaderLink></li>
+          </ul>
+          <!-- Header Icons -->
+          <div class="unset hidden md:flex items-center xl:justify-end">
+
+            <a
+              class="unset text-xl ml-4 hover:text-text-link"
+              href="https://github.com/Makufff"
+            >
+              <i
+                class="fa-brands fa-github"
+                aria-hidden="true"
+                title="Blogster on GitHub"></i>
+              <span class="fa-sr-only">GitHub</span>
+            </a>
+          </div>
+          <div class="flex ">
+            <DarkModeToggle />
+            <span id="menu" class="unset navbar-burger self-center md:hidden ml-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 hover:text-gray-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </snap>
+          </div>
+          </div>
+        </div>
+
+        
+        <!-- Responsive navbar -->
+        <div class="text-center menu hidden md:hidden">
+          <div
+          class="unset flex flex-col justify-center items-center font-semibold font-heading "
+        >
+          <a href="/" class="unset w-full p-2 hover:bg-black rounded-xl">Home</a>
+          <a href="/blogs" class="unset p-2 w-full hover:bg-black rounded-xl">Blog</a>
+          <a href="/author" class="unset p-2 w-full hover:bg-black rounded-xl">Team</a>
+        </div>
+        </div>
+      </nav>
+
+
+
+    </section>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById("menu");
+    menuButton?.addEventListener("click", () => {
+      [...document.querySelectorAll(".menu")].forEach((Element) => {
+        Element.classList.toggle("hidden");
+      });
+    });
+  </script>
+

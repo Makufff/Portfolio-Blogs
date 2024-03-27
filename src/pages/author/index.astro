@@ -1,0 +1,47 @@
+---
+import PageMeta from "../../components/PageMeta.astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import {getAuthors} from "../../lib/Authors"
+const data = getAuthors()
+---
+
+<PageLayout>
+    <PageMeta title="Authors | DevBlogs" slot="meta"/>
+    <Fragment slot="main">
+        <section class="">
+            <br>
+            <br>
+            <h1 class=`text-4xl sm:text-5xl font-black text-center`><span class="bg-gradient-to-br from-[#fb923c] via-[#f97316] to-[#ea580c] dark:from-primary-main dark:via-primary-main dark:to-primary-main bg-clip-text text-transparent" >Meet Our Team = Do it alone</span></h1>
+            <p class="mt-4 text-center">
+              I’m a student interested in AI/ML with experience applying Deep Learning and Machine Learning to projects in Computer Vision, image processing, NLP, and various AI Applications. I have expertise in developing software with React, Flutter, Python, and Node.js for web and mobile applications.
+            <div class="mt-24">
+                <div class="grid mx-auto gap-5 sm:grid-cols-2 lg:grid-cols-2 lg:max-w-screen-sm ">
+                    {
+                        data && data.map((items) => {
+                            return (
+                            <div>
+                      <div  class="relative pb-56 mb-4 rounded shadow lg:pb-64">
+                        <img class="absolute object-cover w-full h-full rounded" src={items.profile} alt="Person" />
+                      </div>
+                      <div class="flex flex-row sm:flex-col justify-between sm:text-center">
+                       <div>
+                        <a href={`/author/${items.nickname}`} class="text-xl font-bold">{items.name}</a>
+                        <p class="mb-1 text-base text-gray-800 dark:text-gray-400">{items.role}</p></div>
+                        <div class="flex items-center space-x-3 sm:justify-center">
+                          <a href={items.links.instagram} class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                          </a>
+                          <a href={items.links.github} class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+    </Fragment>
+</PageLayout>
