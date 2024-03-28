@@ -11,6 +11,7 @@ const posts = await readAll({
   directory: "blog",
   frontmatterSchema: blog,
 });
+
 const sortedPosts = posts
   .filter((p) => p.frontmatter.tags.includes(tag))
   .sort(
@@ -18,6 +19,7 @@ const sortedPosts = posts
       new Date(b.frontmatter.date).valueOf() -
       new Date(a.frontmatter.date).valueOf()
   );
+  
 ---
 
 <section slot="main" class="mx-auto mt-8">

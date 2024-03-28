@@ -6,7 +6,7 @@ export const Authors = [
         email: "Makufff.tanapat@gmail.com",
         description: "Just a boy trying to build amazing websites and products for Businesses",
         role: "Developer",
-        skills: ["Web Developer", "Freelancer"],
+        skills: ["Web Developer" ,],
         profile: "https://img2.pic.in.th/pic/IMG_5664.png",
         links: {
             github: "https://github.com/Makufff",
