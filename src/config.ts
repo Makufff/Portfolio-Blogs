@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = "Makufff.Logs</>";
 export const SITE_DESCRIPTION = "Welcome to Makufff.Logs</> :3";
-// export const TWITTER_HANDLE = "@rohitk_06";
+// export const TWITTER_HANDLE = "@makufff.js";
 export const MY_NAME = "Tanapat Chamted";
 
 // setup in astro.config.mjs
