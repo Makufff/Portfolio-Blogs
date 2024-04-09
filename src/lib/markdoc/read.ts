@@ -6,7 +6,6 @@ import { globby } from "globby";
 import Markdoc from "@markdoc/markdoc";
 import { config } from "./markdoc.config";
 
-// path is relative to where you run the `yarn build` command
 const contentDirectory = path.normalize("./content");
 
 async function parseAndTransform({ content }: { content: string }) {

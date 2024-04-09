@@ -1,0 +1,107 @@
+---
+title: Git
+description: Git โดย อ.ปรานปวีณ
+# Image Path
+ogImagePath: https://scontent.fbkk2-7.fna.fbcdn.net/v/t39.30808-6/423313198_896405152492020_1807881690440319587_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGYSfCZlwK5J9agwDfXz_Dz9l1__gpxvt_2XX_-CnG-3xkAOLfneAAhcD_Pm6-byIKV9bO-fFDzIT-qqt5Ircew&_nc_ohc=mo859-Z5NdEAb7Q1Sts&_nc_ht=scontent.fbkk2-7.fna&oh=00_AfBIdx5RRwI2_bRAJq7_8HHBaDBr7lrgehmDChuyGVYYRw&oe=661A6F51
+# tag show in home [ KMITL , Research , SuperAI , Other ]
+tags: ["SuperAI"]
+# yyyy / mm / dd
+date: 2024-04-09
+# fix false else : boom !
+external: false
+# author [ PP , Makufff ]
+author: "PP"
+---
+
+## Install Git
+Download Git
+Git
+- Download : https://git-scm.com/downloads
+
+## Recommend Tools
+Visual Studio Code (vscode)
+ - Download: https://code.visualstudio.com/Download
+
+
+# Let's Started
+## Basic Git Commnad
+### Git Configuration
+```bash
+git config --global user.name "your name"
+
+git config --global user.email "your_email_address@example.com"
+```
+
+### Create a new local repository
+```bash
+git init
+```
+
+### Add files to staging 
+```bash
+git add <filename> (single file)
+git add * (all)
+git add . (all)
+```
+
+### Commit change to head
+```bash
+git commit -m "commit message"
+```
+
+### Check status
+```bash
+git status
+```
+
+## Git Branch
+### Create Branch
+```bash
+git branch <branch_name>
+```
+
+### Remove Branch (Local)
+```bash
+git branch -d <branch_name>
+```
+
+### Switch Branch
+```bash
+git checkout <branch_name>
+```
+
+### Create and Switch Branch
+```bash
+git checkout –b <branch_name> <commit_id (optional)>
+```
+
+## Git Merge Branch
+### Merge Branch (Local)
+```bash
+git merge <branch_name>
+```
+
+## Remote Repository
+### Connect to a remote repository
+```bash
+git remote add origin <server>
+```
+
+### List all currently remote
+```bash
+git remote –v
+```
+
+### Checkout remote repository
+```bash
+git clone <server>
+```
+
+### Push - Send changes to remote repository
+```bash
+git push origin <branch>
+```
+### Fetch and merge changes on the remote server to your working directory
+```bash
+git pull
+```
